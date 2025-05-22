@@ -11,8 +11,8 @@ POSTGRES_PASSWORD=postgres
 # MinIO: Database connection
 MINIO_ENDPOINT=http://localhost:9000
 MINIO_PORT=9000
-MINIO_ACCESS_KEY=minioadmin
-MINIO_SECRET_KEY=minioadmin
+MINIO_ACCESS_KEY=
+MINIO_SECRET_KEY=
 MINIO_SECURE=false
 MINIO_BUCKET_NAME=satchat
 MINIO_ACCESS_URL=http://localhost:8280/minio/download/commons/
@@ -34,8 +34,8 @@ BASE_URL=http://localhost:8280
 
 # GHN
 GHN_URL=https://dev-online-gateway.ghn.vn/shiip/public-api/v2
-GHN_TOKEN=fa84809c-0f92-11f0-95d0-0a92b8726859
-GHN_SHOPID=196276
+GHN_TOKEN=
+GHN_SHOPID=
 
 # Spring AI
 SPRINGAI_URL_POSTS=http://localhost:8180/api/rec-posts
@@ -45,11 +45,11 @@ SPRINGAI_URL_PRODUCTS=http://localhost:8180/api/rec-products
 SEMANTIC_SEARCH_URL=http://localhost:8000/search?query={query}&top_k={top_k}
 
 # Oauth2
-GOOGLE_CLIENT_ID=91593631753-kqlufs3k4g5oufl8susgai028c5t062a.apps.googleusercontent.com
-GOOGLE_CLIENT_SECRET=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
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
 
 # SMTP
 SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
-SMTP_USERNAME=stephenduizz3101@gmail.com
-SMTP_PASSWORD=szph rhwg kxci jwgo
+SMTP_USERNAME=
+SMTP_PASSWORD=
