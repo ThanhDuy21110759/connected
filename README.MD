@@ -144,7 +144,3 @@ Stop all `container`
 ```bash
 docker stop $(docker ps -q)
 ```
-
-```
-
-```
