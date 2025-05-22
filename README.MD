@@ -41,6 +41,7 @@ To streamline development and testing, we use Docker Compose to spin up supporti
 | `satchat`           | Chat/messaging service (NodeJS or Spring) |
 | `changecapture-e2e` | Change Data Capture with Kafka & Debezium |
 | `FlinkSocial`       | Real-time stream processing with Flink    |
+| `Qdrant`            | docker run -d -p 6333:6333 qdrant/qdrant  |
 
 ### 🧰 Step-by-Step Setup
 
