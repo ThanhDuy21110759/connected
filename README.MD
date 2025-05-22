@@ -101,3 +101,34 @@ nohup uvicorn search-service:app --host 0.0.0.0 --port 8000 > app.log 2>&1 &
 # Monitor the logs
 tail -f app.log
 ```
+
+## 🛑 Stopping Services & Cleaning Up
+
+### Kill running Spring Boot processes
+
+Kill `.war` apps (e.g., `springai`):
+
+```bash
+ps aux | grep '\.war'
+ps aux | grep '\.war' | grep -v grep | awk '{print $2}' | xargs kill
+```
+
+Kill `jar` apps (e.g., `satchat`):
+
+```bash
+ps aux | grep '\.jar'
+ps aux | grep '\.jar' | grep -v grep | awk '{print $2}' | xargs kill
+```
+
+Kill `uvicorn`
+
+```bash
+ps aux | grep uvicorn
+pkill -f uvicorn
+```
+
+Stop all `container`
+
+```bash
+docker stop $(docker ps -q)
+```
