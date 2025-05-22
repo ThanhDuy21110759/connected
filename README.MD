@@ -102,6 +102,18 @@ nohup uvicorn search-service:app --host 0.0.0.0 --port 8000 > app.log 2>&1 &
 tail -f app.log
 ```
 
+#### 5. Deploy Flink Job
+
+After building the `FlinkSocial` project (using Maven or your preferred method), deploy the job as follows:
+
+```bash
+# Copy the built JAR to the Flink JobManager container
+docker cp target/FlinkSocial-1.0-SNAPSHOT.jar jobmanager:/opt
+
+# Run the job inside the container
+docker exec -it jobmanager flink run -c org.example.StreamingJob /opt/FlinkSocial-1.0-SNAPSHOT.jar
+```
+
 ## 🛑 Stopping Services & Cleaning Up
 
 ### Kill running Spring Boot processes
@@ -131,4 +143,8 @@ Stop all `container`
 
 ```bash
 docker stop $(docker ps -q)
+```
+
+```
+
 ```
