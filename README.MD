@@ -68,7 +68,7 @@ mvn spotless:apply
 # Build the application (skip tests)
 mvn clean install -DskipTests
 or
-JAVA_HOME=/usr/lib/jvm/jdk-21.0.7 mvn clean install -DskipTests (for jadk version 21)
+JAVA_HOME=/usr/lib/jvm/jdk-21.0.7 mvn clean install -DskipTests (for jdk version 21)
 ```
 
 #### 3. Run Java application (SpringAI & satchat)
@@ -143,8 +143,4 @@ Stop all `container`
 
 ```bash
 docker stop $(docker ps -q)
-```
-
-```
-
 ```
