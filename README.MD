@@ -145,7 +145,7 @@ Stop all `container`
 ```bash
 docker stop $(docker ps -q)
 ```
-## Mở cổng trên GCP bằng gcloud
+## 🌐 Mở cổng trên GCP bằng gcloud
 
 ```bash
 # Mở cổng 8000
