@@ -145,3 +145,39 @@ Stop all `container`
 ```bash
 docker stop $(docker ps -q)
 ```
+## Mở cổng trên GCP bằng gcloud
+
+```bash
+# Mở cổng 8000
+gcloud compute firewall-rules create allow-8000 \
+  --allow tcp:8000 \
+  --source-ranges 0.0.0.0/0 \
+  --description "Allow port 8000"
+
+# Mở cổng 8180
+gcloud compute firewall-rules create allow-8180 \
+  --allow tcp:8180 \
+  --source-ranges 0.0.0.0/0 \
+  --description "Allow port 8180"
+
+# Mở cổng 8280
+gcloud compute firewall-rules create allow-8280 \
+  --allow tcp:8280 \
+  --source-ranges 0.0.0.0/0 \
+  --description "Allow port 8280"
+
+# Mở cổng 6333
+gcloud compute firewall-rules create allow-6333 \
+  --allow tcp:6333 \
+  --source-ranges 0.0.0.0/0 \
+  --description "Allow port 6333"
+
+# Mở cổng 9021
+gcloud compute firewall-rules create allow-9021 \
+  --allow tcp:9021 \
+  --source-ranges 0.0.0.0/0 \
+  --description "Allow port 9021"
+
+# Check firewall rules
+gcloud compute firewall-rules list
+```
