@@ -181,3 +181,9 @@ gcloud compute firewall-rules create allow-9021 \
 # Check firewall rules
 gcloud compute firewall-rules list
 ```
+
+## Run ngrok in background ([Ngrok dashboard](https://dashboard.ngrok.com))
+
+```bash
+nohup ngrok http 8280 > ngrok.log 2>&1 &
+```
